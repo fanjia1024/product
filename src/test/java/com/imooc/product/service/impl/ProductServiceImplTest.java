@@ -27,6 +27,7 @@ public class ProductServiceImplTest {
 
     @Test
     public void findList() {
-//        productService.findList(Arrays.asList(11,22));
+        List<ProductInfo> list=productService.findList(Arrays.asList("157875196366160022", "157875227953464068"));
+        Assert.assertTrue(list.size() > 0);
     }
 }
