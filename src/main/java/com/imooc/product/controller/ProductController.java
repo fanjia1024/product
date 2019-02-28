@@ -74,12 +74,12 @@ public class ProductController {
             productVOList.add(productVO);
         }
         log.info("productVOList={}",productVOList.toString());
-        ResultVO resultVO=new ResultVO();
-        resultVO.setCode(0);
-        resultVO.setMsg("成功");
-        resultVO.setData(productVOList);
-        return resultVO;
-//        return ResultVOUtil.success(productVOList);
+//        ResultVO resultVO=new ResultVO();
+//        resultVO.setCode(0);
+//        resultVO.setMsg("成功");
+//        resultVO.setData(productVOList);
+//        return resultVO;
+        return ResultVOUtil.success(productVOList);
     }
 
 //    /**
