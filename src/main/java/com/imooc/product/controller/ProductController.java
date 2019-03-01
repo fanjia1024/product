@@ -7,6 +7,7 @@ import com.imooc.product.VO.ResultVO;
 //import com.imooc.product.common.ProductInfoOutput;
 import com.imooc.product.dataobject.ProductCategory;
 import com.imooc.product.dataobject.ProductInfo;
+import com.imooc.product.dto.CartDTO;
 import com.imooc.product.service.CategoryService;
 import com.imooc.product.service.ProductService;
 import com.imooc.product.utils.ResultVOUtil;
@@ -98,8 +99,8 @@ public class ProductController {
         return productService.findList(productIdList);
     }
 
-//    @PostMapping("/decreaseStock")
-//    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList) {
-//        productService.decreaseStock(decreaseStockInputList);
-//    }
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDTO> decreaseCartDTOList) {
+        productService.decreaseStock(decreaseCartDTOList);
+    }
 }
